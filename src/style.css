@@ -6,34 +6,22 @@
 body {
   margin: 0;
   padding: 1rem;
-  color: white;
-  background-color: #0b1416;
+  background-color: #dae0e6;
+  font-size: 20px;
 }
 
 .App {
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   width: fit-content;
-}
-
-.commentContainer {
-  margin-top: 6px;
-  background-color: #d3d3d3e0;
-  display: flex;
-  flex-direction: column;
-  padding: 5px 10px;
-  width: 300px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.commentContainer:hover {
-  background-color: #d3d3d3bf;
+  width: 500px;
 }
 
 .inputContainer {
   display: flex;
-  align-items: baseline;
-  gap: 5px;
+  align-items: last baseline;
+  gap: 10px;
 }
 
 .inputContainer > span {
@@ -44,16 +32,21 @@ body {
   margin: 6px 0 0px 0;
   padding: 5px;
   display: flex;
-  border: 1px solid lightgray;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   border-radius: 5px;
-  background-color: #e7e7e7;
 }
 
-.first_input {
+.input {
+  border-radius: 5px;
   margin: 0;
+  padding: 20px;
+  border: 1px solid rgb(175, 173, 173);
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  width: 400px;
 }
 
 .commentContainer > span {
@@ -61,16 +54,45 @@ body {
 }
 
 .reply {
-  font-size: 12px;
+  font-size: 16px;
   padding: 5px;
   border-radius: 5px;
-  color: #4e4e4e;
-  font-weight: 600;
+  color: #6d6c6c;
   cursor: pointer;
+  margin-right: 5px;
+  margin-top: 15px;
+  background-color: #e8eef5;
+}
+
+.reply:hover {
+  color: black;
+}
+
+.commentButton {
+  color: white;
+  background-color: #ff4400bb;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.commentButton:hover {
+  background-color: #ff4500;
+  font-weight: bold;
+  color: white;
 }
 
 .comment {
-  color: #ffffff;
-  background-color: #569dff;
+  color: black;
+  background-color: white;
+  border: 1px solid rgb(211, 210, 210);
+  border-radius: 5px;
   letter-spacing: 0.8px;
+  margin: 15px;
+  padding: 15px;
+  padding-left: 25px;
+  font-size: 20px;
 }
