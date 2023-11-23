@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import Comment from "./components/Comment";
 import useComment from "./hooks/useComment";
+import Navbar from "./components/Navbar/Navbar";
 
 const comments = {
   id: 1,
@@ -30,13 +31,16 @@ export default function App() {
     setCommentsData(temp);
   };
   return (
-    <div className="App">
-      <Comment
-        handleInsertComment={handleInsertComment}
-        handleEditComment={handleEditComment}
-        handleDeleteComment={handleDeleteComment}
-        comment={commentsData}
-      />
-    </div>
+    <>
+      <Navbar />
+      <div className="commentSection">
+        <Comment
+          handleInsertComment={handleInsertComment}
+          handleEditComment={handleEditComment}
+          handleDeleteComment={handleDeleteComment}
+          comment={commentsData}
+        />
+      </div>
+    </>
   );
 }

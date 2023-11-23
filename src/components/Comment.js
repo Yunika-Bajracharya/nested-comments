@@ -4,7 +4,6 @@ import "../style.css";
 import { useState, useRef, useEffect } from "react";
 import { ReactComponent as DownArrow } from "../assets/down-arrow.svg";
 import { ReactComponent as UpArrow } from "../assets/up-arrow.svg";
-import { ReactComponent as ReplyIcon } from "../assets/reply-icon.svg";
 import { ReactComponent as EditIcon } from "../assets/edit-icon.svg";
 import { ReactComponent as DeleteIcon } from "../assets/delete-icon.svg";
 
@@ -13,6 +12,8 @@ const Comment = ({
   handleInsertComment,
   handleEditComment,
   handleDeleteComment,
+  parentWidth,
+  isChild,
 }) => {
   const [input, setInput] = useState("");
   const [editMode, setEditMode] = useState(false);
@@ -44,7 +45,7 @@ const Comment = ({
   };
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <div className={comment.id === 1 ? "inputContainer" : "comment"}>
         {comment.id === 1 ? (
           <>
@@ -133,7 +134,21 @@ const Comment = ({
           </>
         )}
       </div>
-      <div style={{ display: expand ? "block" : "none", paddingLeft: 20 }}>
+      <div
+        style={{
+          display: expand ? "block" : "none",
+          paddingLeft: 20,
+          position: "relative",
+        }}
+      >
+        {!isChild && comment.items && comment.items.length > 0 && (
+          <div
+            className="connector-line"
+            style={{
+              left: `${parentWidth + 5}px`,
+            }}
+          />
+        )}
         {showInput && (
           <div className="inputContainer">
             <input

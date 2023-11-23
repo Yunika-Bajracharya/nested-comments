@@ -1,16 +1,15 @@
 * {
+  margin: 0;
   box-sizing: border-box;
   font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 1rem;
   background-color: #dae0e6;
   font-size: 20px;
 }
 
-.App {
+.commentSection {
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -61,7 +60,7 @@ body {
   cursor: pointer;
   margin-right: 5px;
   margin-top: 15px;
-  background-color: #e8eef5;
+  background-color: #f1f4f7;
 }
 
 .reply:hover {
@@ -95,4 +94,12 @@ body {
   padding: 15px;
   padding-left: 25px;
   font-size: 20px;
+}
+
+.connector-line {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 1.4px;
+  background: rgb(245, 243, 243);
 }

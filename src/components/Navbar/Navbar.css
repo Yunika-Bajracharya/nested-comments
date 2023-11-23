@@ -1,0 +1,17 @@
+.navbar {
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4500;
+  cursor: default;
+}
+
+.navbar-brand:hover {
+  color: black;
+}
